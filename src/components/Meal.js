@@ -12,14 +12,14 @@ class Meal extends React.Component {
         <div className="divide">
           <div>
             <h1>{this.props.mealData.title}</h1>
-            <p>{this.props.mealData.instructions}</p>
+            <li>{this.props.mealData.instructions}</li>
           </div>
-          <ul>
+          <ul className ="controlls">
             <li onClick={() => {
-              this.props.handleView('editMeal');
-            }}>edit meal</li>
+              this.props.handleView('editMeal',this.props.mealData);
+            }}>Add Instructions</li>
             <li onClick={() => {
-              this.props.handleDelete('editPost', this.props.mealData.id)
+              this.props.handleDelete(this.props.mealData.id)
             }}>delete meal</li>
           </ul>
           </div>

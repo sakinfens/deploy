@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 body{
   font-family: 'Noto Serif', serif;
+  margin:0;
 }
 nav{
   display: flex;
@@ -10,24 +11,28 @@ nav{
   padding: 0px 50px;
   opacity: 70%;
   font-size: 30px;
+  background-image: url("https://i.dlpng.com/static/png/6367407_preview.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .instructions{
-  background-image: url('https://images.pond5.com/cute-brain-cartoon-hd-animation-footage-090469941_prevstill.jpeg');
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 1px solid black;
+  align-items: center;
   padding: 0px 50px;
   font-size: 20px;
-  height: 50vh;
-  background-size: auto;
-  background-repeat: no-repeat;
-
-
-
+  height: 100%;
+  flex-wrap: wrap;
+}
+.instructions p{
+  width: 100%
+}
+.instructions div{
+  width: 40%;
 }
 .instructions img{
-  width: 70vh;
+  width: 100%;
 }
 
 main img{
@@ -39,11 +44,33 @@ ul{
 
 }
 li{
-  list-style-type: none;
-  border: 1px solid black;
   margin: 5px;
   cursor: pointer;
   padding: 5px;
+}
+.controlls{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.controlls li{
+  list-style-type: none;
+  border: 1px solid black;
+}
+section{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+section div{
+  display: flex;
+}
+section p{
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
 }
 article{
   margin: 0 auto;
@@ -64,4 +91,54 @@ article div{
   box-shadow: 5px 10px #888888;
 
   font-size: 20px;
+}
+form {
+  padding: 20px;
+  text-align: center;
+}
+label {
+  display: inline-block;
+  width: 45%;
+  margin: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  font-family: var(--header-font);
+  color: var(--light-green);
+}
+input[type="text"] {
+  display: inline-block;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+textarea {
+  width: 94%;
+  display: block;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 13px;
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  display: block;
+  border: 0;
+  background: var(--grey-purple);
+  color: white;
+  font-family: var(--accent-font);
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 10px auto 0px auto;
+}
+input[type="submit"]:hover {
+  background-color: var(--light-green);
+  cursor: pointer;
 }

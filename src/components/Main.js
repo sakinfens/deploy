@@ -90,7 +90,10 @@ class Main extends React.Component {
     return (
 
       <main>
-      <Header />
+
+      <Header
+      handleView={this.props.handleView}
+      />
       <h1>{this.props.view.pageTitle}</h1>
       { this.props.view.page === 'home' ?
         this.state.meals.map((mealData) => (
@@ -108,17 +111,6 @@ class Main extends React.Component {
         view={this.props.view}
       />
     }
-    <section>
-      <h1>NAVIGATE</h1>
-      <ul>
-        <li onClick={() => {
-          this.props.handleView('home')
-        }}>home</li>
-        <li onClick={() => {
-          this.props.handleView('addMeal')
-        }}>add post</li>
-      </ul>
-    </section>
       </main>
     )
   }

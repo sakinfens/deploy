@@ -33,7 +33,7 @@ class Form extends React.Component{
           meal
           <textarea placeholder="write your words" id="instructions" value={this.state.instructions} onChange={this.handleChange}></textarea>
         </label>
-        <input type="submit" value="share"/>
+        <input type="submit" value="Submit"/>
       </form>
 
 
