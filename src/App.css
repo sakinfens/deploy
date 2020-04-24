@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+body{
+  font-family: 'Noto Serif', serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 50px;
+  opacity: 70%;
+  font-size: 30px;
+}
+.instructions{
+  background-image: url('https://images.pond5.com/cute-brain-cartoon-hd-animation-footage-090469941_prevstill.jpeg');
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid black;
+  padding: 0px 50px;
+  font-size: 20px;
+  height: 50vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+
+
+}
+.instructions img{
+  width: 70vh;
+}
+
+main img{
+  width: 50vh;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+
+}
+li{
+  list-style-type: none;
+  border: 1px solid black;
+  margin: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+article{
+  margin: 0 auto;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  text-align: center;
+  border: 1px solid #ffe291;
+  background-color: #f2f2f2;
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+article div{
+  margin: 50px;
+}
+.divide{
+  box-shadow: 5px 10px #888888;
+
+  font-size: 20px;
 }

@@ -1,26 +1,66 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// =============================
+// DEPENDENCIES
+// =============================
+// packages
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// components
+import Main from './components/Main.js'
+
+// =============================
+// COMPONENT CLASS
+// =============================
+class App extends React.Component {
+  constructor(props) {
+  super(props)
+  this.state = {
+    view: {
+      page: 'home',
+      pageTitle: 'home',
+    }
+  }
 }
 
-export default App;
+  // ==============
+  // HANDLERS
+  // ==============
+  // handles the view state
+  handleView = (view) => {
+    // declare an empty variable
+    let pageTitle = '';
+    // decide the page title based on the handleView
+    switch (view) {
+      case 'home':
+        pageTitle = 'home'
+        break
+      case 'addPost':
+        pageTitle = 'Add'
+        break
+      case 'editPost':
+        pageTitle = 'Edit'
+        break
+      default:
+        break
+    }
+    // update the state
+    this.setState({
+      view: {
+        page: view,
+        pageTitle: pageTitle
+      }
+    })
+  }
+
+  // ==============
+  // RENDER
+  // ==============
+  render () {
+    return (
+        <div>
+          <Main view={this.state.view} handleView={this.handleView}/>
+        </div>
+    )
+  }
+}
+
+export default App
