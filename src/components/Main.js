@@ -10,7 +10,7 @@ let baseUrl = '';
 if (process.env.NODE_ENV === 'development') {
   baseUrl = 'https://pacific-wildwood-75146.herokuapp.com/api'
 } else {
-  baseUrl = 'https://cors-anywhere.herokuapp.com/https://pacific-wildwood-75146.herokuapp.com/api/meals'
+  baseUrl = 'https://pacific-wildwood-75146.herokuapp.com/api'
 }
 
 class Main extends React.Component {
