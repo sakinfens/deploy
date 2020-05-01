@@ -1,3 +1,6 @@
+Link: https://affectionate-villani-fc98e0.netlify.app/
+Back end: https://github.com/sakinfens/proj-4
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
